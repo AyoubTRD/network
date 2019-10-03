@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://ayoubtrd:ayoubtrd0.@cluster0-hamdp.mongodb.net/admin?retryWrites=true&w=majority"
+}
