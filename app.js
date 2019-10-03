@@ -5,11 +5,18 @@ const connectDB = require("./config/db");
 
 connectDB();
 
-app.get("/", (req, res) => {
-  res.send({
-    msg: "hello world"
-  });
-});
+// Routes
+const profileRoutes = require("./routes/api/profile"),
+  authRoutes = require("./routes/api/auth"),
+  postsRoutes = require("./routes/api/posts"),
+  userRoutes = require("./routes/api/user");
+
+app.use("/api/profile", profileRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/posts", postsRoutes);
+app.use("/api/user", userRoutes);
+
+// server
 
 const port = process.env.PORT || 8080;
 
